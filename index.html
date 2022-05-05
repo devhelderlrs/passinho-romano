@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script defer src='./script.js'></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>NO PASSINHO DO ROMANO</h1>
+    <div class="container">
+        <div class="input-text">
+            <div class="input-h1">
+                <h1>INSIRA SUA MENSAGEM</h1>
+                <hr>
+            </div>
+            <label for="txt">
+                <textarea id="txt" rows="3"></textarea>
+            </label>
+        </div>
+
+        <div class="criptografia">
+            <select id="selecao">
+                <option value="1">Base 64</option>
+                <option value="2">Cifra de César</option>
+            </select>
+            <div class="somaCifra">
+                <input type="number" id="somaCifra">
+            </div>
+        </div>
+        <div class="h1">
+            <hr>
+            <h1>CRIPTOGRAFIA</h1>
+            <hr>
+        </div>
+        <div class="chaves-container">
+
+            <div class="inner-chaves">
+                <label>CRIPTOGRAFAR</label>
+                <div>
+                    <input type="radio" id="cripto" value="encode" name="chave">
+                </div>
+            </div>
+            <div class="inner-chaves">
+                <div>
+                    <label>DESCRIPTOGRAFAR</label>
+                </div>
+                <input type="radio" id="decripto" value="decode" name="chave">
+            </div>
+        </div>
+
+        <button id="btn">teste</button>
+
+        <div class="resposta">
+            <textarea id="msgFinal" rows="3"></textarea>
+        </div>
+    </div>
+
+</body>
+
+</html>
