@@ -14,12 +14,12 @@ btn.addEventListener("click", function () {
     var revertBase64 = atob(txtOriginal.value);
     txtFinal.value = revertBase64;
   } else if (seletor.value == 2 && encode.checked) {
-    var resultCesar = cifraDeCesar(txtOriginal.value, +incremento.value);
+    var resultCesar = cifraDeCesar(txtOriginal.value, +incrementoCifra.value);
     txtFinal.value = resultCesar;
   } else if (seletor.value == 2 && decode.checked) {
     var resultDecriptoCesar = cesarDecifrado(
       txtOriginal.value,
-      +incremento.value
+      +incrementoCifra.value
     );
     txtFinal.value = resultDecriptoCesar;
   } else {
