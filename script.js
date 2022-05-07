@@ -5,6 +5,7 @@ var seletor = document.querySelector("#selecao");
 var encode = document.querySelector("#cripto");
 var decode = document.querySelector("#decripto");
 var incrementoCifra = document.querySelector("#somaCifra");
+// ↑ VARIAVEIS QUE RECEBEM OS ELEMENTOS HTML
 
 btn.addEventListener("click", function () {
   if (seletor.value == 1 && encode.checked) {
@@ -13,6 +14,8 @@ btn.addEventListener("click", function () {
   } else if (seletor.value == 1 && decode.checked) {
     var revertBase64 = atob(txtOriginal.value);
     txtFinal.value = revertBase64;
+// ↑ CRIPTOGRAFIA PARA BASE 64
+
   } else if (seletor.value == 2 && encode.checked) {
     var resultCesar = cifraDeCesar(txtOriginal.value, +incrementoCifra.value);
     txtFinal.value = resultCesar;
@@ -26,6 +29,7 @@ btn.addEventListener("click", function () {
     alert(`Selecione uma criptografia e escolha a opção desejada.`);
   }
 });
+// ↑ ALGORITMO PARA CODIFICAR/DECODIFICAR BASEADO NAS ESCOLHAS DO USUÁRIO NA PÁGINA
 
 seletor.addEventListener("click", function () {
   if (seletor.value == 2 && true) {
@@ -34,16 +38,19 @@ seletor.addEventListener("click", function () {
     incrementoCifra.style.display = "none";
   }
 });
+// ↑ MOSTRA/ESCONDE O CAMPO PARA DEFINIR O INCREMENTO DA CIFRA DE CESAR
 
 encode.addEventListener("click", function () {
   btn.innerText = "Criptografar Mensagem";
   btn.style.display = "inline-block";
 });
+// ↑ ALTERA O TEXTO DO BOTÃO PARA CRITPOGRAFAR
 
 decode.addEventListener("click", function () {
   btn.innerText = "Descriptografar Mensagem";
   btn.style.display = "inline-block";
 });
+// ↑ ALTERA O TEXTO DO BOTÃO PARA DESCRITPOGRAFAR
 
 function cifraDeCesar(texto, increment) {
   texto = txtOriginal.value;
@@ -69,6 +76,7 @@ function cifraDeCesar(texto, increment) {
   }
   return retornoCesar.join("");
 }
+// ↑ FUNÇÃO PARA FAZER A CRIPTOGRAFIA DE CESAR
 
 function cesarDecifrado(texto, increment) {
   texto = txtOriginal.value;
@@ -98,3 +106,4 @@ function cesarDecifrado(texto, increment) {
   }
   return msgCriptografada.join("");
 }
+// ↑ FUNÇÃO PARA DESFAZER A CRIPTOGRAFIA DE CESAR

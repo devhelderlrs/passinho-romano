@@ -21,6 +21,10 @@ input, textarea, select{
     border-radius: 10px;
 }
 
+.rbtn{
+        
+}
+
 .input-h1{
     border-radius: 10px 10px 0 0;
     background-color: black;
@@ -64,70 +68,4 @@ input, textarea, select{
     text-align: center;
     display:none;
     margin-bottom: 20px;
-}
-
-@media (min-width: 700px){
-    *{
-        margin: 0; padding: 0;
-        font-family: 'Segoe UI';
-        font-size: 30px;
-    }
-    
-    body{
-        background-color: rgb(142, 90, 12)
-    }
-    
-    div{
-        margin-bottom: 10px;
-    }
-    
-    input, textarea, select{
-        border-radius: 10px;
-    }
-    
-    .input-h1{
-        border-radius: 10px 10px 0 0;
-        background-color: black;
-        color: white;
-    }
-    .container{
-        border-radius: 10px;
-        text-align: center;
-        margin: 5% 10%;
-        background-color: rgba(197, 97, 21, 0.745);
-    }
-    
-    .h1{
-        background-color: black;
-        color: white;
-        margin-bottom: 20px;
-    }
-    
-    .criptografia > select{
-        width: 299px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .somaCifra > input{
-        text-align: center;
-        width: 299px;
-    }
-    
-    .chaves-container{
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    #somaCifra{
-        display: none;
-    }
-    
-    #btn{
-        text-align: center;
-        display:none;
-        margin-bottom: 20px;
-    }
 }
